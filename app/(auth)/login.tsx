@@ -1,14 +1,17 @@
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { Link, useRouter } from 'expo-router';
 import { LogIn } from 'lucide-react-native';
+import { Global_container } from '../(tabs)';
 
 export default function LoginScreen() {
   const router = useRouter();
 
   const handleLogin = () => {
-    router.replace('/(tabs)');
-  };
-
+    const check = Global_container.user.find((user) => user.email === email && user.password === password);
+    if(!check){
+      console.log("User not found");
+      return  };
+    }
   return (
     <View style={styles.container}>
       <View style={styles.header}>
