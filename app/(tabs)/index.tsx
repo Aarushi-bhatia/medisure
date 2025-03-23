@@ -17,6 +17,11 @@ import BottomNavigation from '../components/BottomNavigation';
 // Import types
 import { Medication, TimeSlot } from '../types';
 
+
+export const Global_container = {
+  user :[],
+  medicine :[]
+}
 const HomeScreen: React.FC = () => {
   const router = useRouter();
   

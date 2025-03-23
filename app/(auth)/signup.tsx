@@ -1,13 +1,15 @@
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { Link, useRouter } from 'expo-router';
 import { UserPlus } from 'lucide-react-native';
+import { Global_container } from '../(tabs)';
 
 export default function SignupScreen() {
   const router = useRouter();
 
   const handleSignup = () => {
-    router.replace('/(tabs)');
-  };
+    Global_container.user.push({fullName, email, password});
+    console.log("global container" ,GLOBAL_CONTAINER.user);
+    router.replace('/(tabs)');  };
 
   return (
     <View style={styles.container}>
